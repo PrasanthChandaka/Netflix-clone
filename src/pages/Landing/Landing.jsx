@@ -80,7 +80,6 @@ const landingProfile = {
 };
 
 const Landing = () => {
-  const { option, setEmail } = useContext(store);
   const navigate = useNavigate();
   const landingBannerContent = (option) => {
     switch (option) {
