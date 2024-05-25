@@ -1,0 +1,54 @@
+.not-found {
+  min-height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 30px;
+}
+.not-found div:nth-child(1) {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.not-found img {
+  width: 50%;
+  max-width: 400px;
+}
+.not-found button {
+  display: inline-flex;
+  align-self: flex-start;
+  border: 1px solid honeydew;
+  background-color: transparent;
+  color: white;
+  font-size: max(1.5vw);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.not-found h1 {
+  font-size: clamp(16px, 2.5vw, 28px);
+}
+.not-found p {
+  font-size: max(1.3vw);
+}
+@media screen and (max-width: 767px) {
+  .not-found {
+    flex-direction: column;
+  }
+  .not-found div:nth-child(1) {
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    order: 2;
+  }
+  .not-found img {
+    order: 1;
+    width: 100%;
+    max-width: 250px;
+  }
+  .not-found button {
+    align-self: center;
+  }
+}

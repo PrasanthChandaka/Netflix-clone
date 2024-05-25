@@ -1,0 +1,101 @@
+.login {
+  background-image: url("/background_banner.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+.login .netflix {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 90px;
+  z-index: 99;
+}
+.login::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.login form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 40px 30px;
+  gap: 1rem;
+  border-radius: 5px;
+  z-index: 1;
+}
+form h1 {
+  font-weight: 500;
+  font-size: clamp(18px, 2vw, 28px);
+}
+form input {
+  padding: 8px;
+  outline: none;
+  border: none;
+  background-color: #272727;
+  color: white;
+  border-radius: 5px;
+}
+::placeholder {
+  color: rgb(148, 144, 144);
+  font-weight: bold;
+}
+form button {
+  padding: 8px;
+  background-color: rgb(202, 19, 19);
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+form .checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(148, 144, 144);
+  font-weight: 500;
+}
+.checkbox-container input {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+.checkbox-container label {
+  margin-left: 5px;
+}
+.text {
+  color: rgb(148, 144, 144);
+  font-weight: 500;
+  margin-top: 20px;
+}
+.text span {
+  color: white;
+  font-weight: 600;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 40px 30px;
+  gap: 1rem;
+  border-radius: 5px;
+}

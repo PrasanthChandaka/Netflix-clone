@@ -1,0 +1,80 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  position: fixed;
+  z-index: 99;
+}
+.navbar div:nth-child(1) {
+  display: flex;
+  gap: 2rem;
+}
+.logo {
+  width: 90px;
+}
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+}
+
+ul li a {
+  font-size: max(1.2vw);
+}
+
+.navbar div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar div:nth-child(2) img {
+  height: 20px;
+  width: 20px;
+}
+
+.profile-container {
+  display: flex;
+  gap: 0.4rem;
+  cursor: pointer;
+  position: relative;
+}
+.profile-container img:nth-child(1) {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+.navbar-scroll {
+  background-color: #141414;
+}
+.logout-div {
+  position: absolute;
+  background-color: black;
+  top: 30px;
+  right: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    background-color: #141414;
+    padding: 20px;
+  }
+  .logo {
+    width: 60px;
+  }
+  .navbar div:nth-child(2) img {
+    height: 15px;
+    width: 15px;
+  }
+  .profile-container img:nth-child(1) {
+    height: 20px !important;
+    width: 20px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+}
