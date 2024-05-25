@@ -141,7 +141,7 @@ const Landing = () => {
   const { profileHeading, profileDescription } = landingProfileContent(option);
   return (
     <>
-      <div className="bg-header-bg bg-cover min-[960px]:h-screen w-full relative grid place-items-center pt-28 pb-10">
+      <div className="bg-[url('../../public/background_banner.jpg')] bg-cover min-[960px]:h-screen w-full relative grid place-items-center pt-28 pb-10">
         <div className="absolute h-full w-full bg-[rgba(0,0,0,0.5)]"></div>
         <Header />
         <div className="inner-container w-full text-white flex flex-col justify-center items-center gap-5 text-center z-10">
