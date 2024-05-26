@@ -3,6 +3,7 @@ import { FiPlus } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import { store } from "../context";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const englishContent = [
   {
@@ -87,6 +88,7 @@ const hindiContent = [
 const AccordianComponent = () => {
   const [expand, setExpand] = useState(false);
   const { option } = useContext(store);
+  const navigate = useNavigate();
   return (
     <ul className="flex flex-col gap-3 text-sm md:text-xl">
       {option === "English"
@@ -127,21 +129,27 @@ const AccordianComponent = () => {
           ? "Ready to watch? Enter your email to create or restart your membership."
           : "देखने के लिए तैयार हैं? अपनी मेंबरशिप बनाने या रीस्टार्ट करने के लिए अपना ईमेल एड्रेस डालें."}
       </p>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-5 w-full">
+      <form
+        className="flex flex-col md:flex-row justify-center items-center gap-5 w-full"
+        onSubmit={(e) => {
+          e.preventDefault();
+          navigate("/login");
+        }}
+      >
         <input
           type="email"
           required
           placeholder={option === "English" ? "Email Address" : "ईमेल एड्रेस"}
-          className="rounded-md p-4 w-[70%] max-w-[340px] bg-[rgba(0,0,0,0.6)] border border-grey-50 placeholder:text-[#c0bebe] outline-none"
+          className="rounded-md p-4 w-[70%] max-w-[340px] bg-[rgba(0,0,0,0.6)] border placeholder:text-[#c0bebe] outline-none"
         />
         <button
           className="bg-[#C11119] inline-flex items-center gap-2 p-4 rounded-md text-xl font-semibold"
-          type="button"
+          type="submit"
         >
           {option === "English" ? "Get Started" : "शुरू करें"}
           <IoIosArrowForward />
         </button>
-      </div>
+      </form>
     </ul>
   );
 };

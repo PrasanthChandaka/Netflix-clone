@@ -10,9 +10,8 @@ import { addDoc, collection } from "firebase/firestore";
 import { toast } from "react-toastify";
 import netflix_spinner from "../../assets/netflix_spinner.gif";
 import logo from "../../assets/logo.png";
-import { store } from "../../context";
 
-const Login = (props) => {
+const Login = () => {
   const [signState, setSignState] = useState("signIn");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

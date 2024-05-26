@@ -19,6 +19,7 @@ body {
   background-color: black;
   scroll-behavior: smooth;
   color: white;
+  touch-action: pan-y;
 }
 
 button {
