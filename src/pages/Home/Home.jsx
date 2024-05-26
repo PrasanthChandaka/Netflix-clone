@@ -5,7 +5,6 @@ import info from "../../assets/info_icon.png";
 import { Link } from "react-router-dom";
 import Navbar from "../../components/Navbar/Navbar";
 import Slider from "../../components/Slider/Slider";
-import Tv from "../../components/TvSlider/Tv";
 import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
@@ -75,7 +74,6 @@ const Home = () => {
         <Slider title={"Only on Netflix"} category={"top_rated"} />
         <Slider title={"Upcoming"} category={"upcoming"} />
         <Slider title={"Top pics for you"} category={"top_rated"} />
-        <Tv />
       </div>
       <hr className="border-[5px] border-[#232323]" />
       <Footer />
