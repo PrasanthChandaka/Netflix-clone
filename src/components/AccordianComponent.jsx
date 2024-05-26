@@ -90,7 +90,7 @@ const AccordianComponent = () => {
   const { option } = useContext(store);
   const navigate = useNavigate();
   return (
-    <ul className="flex flex-col gap-3 text-sm md:text-xl">
+    <ul className="touch-pan-y flex flex-col gap-3 text-sm md:text-xl">
       {option === "English"
         ? englishContent.map((each) => (
             <li key={each.id}>
