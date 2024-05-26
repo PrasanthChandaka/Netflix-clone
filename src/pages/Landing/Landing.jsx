@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Header from "../../components/Header";
 import { store } from "../../context";
 import { IoIosArrowForward } from "react-icons/io";
@@ -80,6 +80,14 @@ const landingProfile = {
 };
 
 const Landing = () => {
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/home");
+    } else {
+      navigate("/");
+    }
+  }, []);
+
   const { option } = useContext(store);
   const navigate = useNavigate();
   const landingBannerContent = (option) => {
