@@ -57,7 +57,7 @@ const Login = (props) => {
           password,
         });
         toast.success("Success we have created your accout.You can login Now!");
-        setSignState("SsignIn");
+        setSignState("signIn");
       } catch (e) {
         toast.error(e.message.split("/")[1].split(")")[0].split("-").join(" "));
       }
