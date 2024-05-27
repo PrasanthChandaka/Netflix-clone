@@ -28,9 +28,7 @@
   width: 100%;
   max-width: 700px;
 }
-.banner-content img {
-  width: 60%;
-}
+
 .btn-container {
   display: flex;
   gap: 0.5rem;

@@ -25,11 +25,7 @@ const Home = () => {
     )
       .then((response) => response.json())
       .then((response) => {
-        setData(
-          response.results[
-            Math.floor(Math.random() * response.results.length - 1)
-          ]
-        );
+        setData(response.results[1]);
       })
       .catch((err) => console.error(err));
   }, []);
