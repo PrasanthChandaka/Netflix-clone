@@ -19,14 +19,6 @@ const Login = () => {
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      navigate("/home");
-    } else {
-      navigate("/login");
-    }
-  });
-
   const submitForm = async (e) => {
     e.preventDefault();
     setLoader(true);

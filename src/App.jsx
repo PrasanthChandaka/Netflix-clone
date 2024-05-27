@@ -15,7 +15,10 @@ const App = () => {
       <ToastContainer theme="dark" position="top-right" animation="bounce" />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<ProtectedRoute />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+
         <Route path="/home" element={<ProtectedRoute />}>
           <Route exact path="/home" element={<Home />} />
         </Route>
