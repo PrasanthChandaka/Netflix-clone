@@ -1,0 +1,40 @@
+.slider {
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  margin: 2rem 0;
+}
+.slide {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slider h1 {
+  font-size: max(1.5vw, 18px);
+  margin-bottom: 10px;
+}
+
+.slide img {
+  height: 100%;
+  width: 100%;
+  min-height: 120px;
+  min-width: 180px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  transition: 300ms ease-in;
+  border-radius: 10px;
+}
+
+.slide p {
+  font-size: max(0.8rem, 14px);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .slide img:hover {
+    transform: scale(1.1);
+    filter: saturate(0.5);
+  }
+}

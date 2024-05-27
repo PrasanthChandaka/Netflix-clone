@@ -4,6 +4,7 @@ import leftArrow from "../../assets/back_arrow_icon.png";
 import ReactPlayer from "react-player";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Notfound from "../../components/Notfound/Notfound";
+import Similar from "../../components/Similar/Similar";
 
 const Player = () => {
   const { id } = useParams();
@@ -20,14 +21,10 @@ const Player = () => {
   };
 
   useEffect(() => {
-    fetch(
-      `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`,
-      options
-    )
+    fetch(`https://api.themoviedb.org/3/movie/${id}/videos`, options)
       .then((response) => response.json())
       .then((response) => {
         setData(response.results[0]);
-        console.log(response.results);
       })
       .catch((err) => console.error(err));
   }, []);
@@ -44,14 +41,13 @@ const Player = () => {
       <Link to="/home">
         <img src={leftArrow} alt="left" />
       </Link>
-      <div className="h-full max-h-[450px] md:max-h-[900px]">
+      <div className="h-[900px] max-h-[450px] md:max-h-[900px]">
         <ReactPlayer
           className=""
           url={`https://www.youtube.com/embed/${data.key}`}
           controls
           height="90%"
           width="100%"
-          playing="true"
         />
       </div>
       <div className="video-details bg-[grey] p-5 flex justify-center gap-3 text-sm md:text-xl">
@@ -61,6 +57,7 @@ const Player = () => {
         <p>|</p>
         <p>{data.type}</p>
       </div>
+      <Similar id={id} />
     </div>
   ) : (
     <Notfound />
