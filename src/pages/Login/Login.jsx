@@ -23,7 +23,7 @@ const Login = () => {
     if (localStorage.getItem("token")) {
       navigate("/home");
     } else {
-      navigate("/");
+      navigate("/login");
     }
   });
 
